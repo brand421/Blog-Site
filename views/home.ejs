@@ -4,7 +4,7 @@
 
 <p><%= homeContent %></p>
 
-<% posts.forEach(element => { %>
-    <% console.log(element.title) %>
+<% posts.forEach(post => { %>
+    <% console.log(post.title) %>
 <% }) %>
 <%- include('./partials/footer'); -%>
