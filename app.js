@@ -34,6 +34,7 @@ app.get("/", function(req, res) {
   Post.find({})
     .then(function(posts) {
       if(posts) {
+        console.log(posts);
         res.render("home", {
           homeContent: homeStartingContent,
           posts: posts
@@ -96,15 +97,6 @@ app.get("/posts/:postId", function(req, res) {
         })
       }
     })
-  // posts.forEach(post => {
-  //   const postTitle = _.lowerCase(post.title);
-  //   if (postTitle === postName) {
-  //     res.render("post", {
-  //       postTitle: post.title, 
-  //       postContent: post.body
-  //     })
-  //   }
-  // })
 });
 
 
